@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Tennisclub.Models.Lesson>
+@{
+    ViewBag.Title = "One Column Portfolio";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Our Lessons
+             
+            </h1>
+        </div>
+    </div>
+
+    @foreach (var item in Model)
+    {
+
+        <div class="row">
+            <div class="col-md-7">
+              
+                <img src="~/Images/@item.ImagePath" class="img-responsive"/>
+                <br /><br /><br />
+            </div>
+            <div class="col-md-5">
+                <h3>@item.LessonName</h3>
+                <h4>Coach @item.Employee.FirstName @item.Employee.LastName</h4>
+                <p>@item.LessonDescription</p>
+                <a href="@Url.Action("Index","Contact")" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+            
+
+
+    }
+</div>

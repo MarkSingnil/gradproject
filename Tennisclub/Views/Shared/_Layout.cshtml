@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maple Ridge Tennis Club - @ViewBag.Title</title>
+
+    <!-- Bootstrap -->
+    <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/modern-business.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/fontawesome-all.min.css")" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                @*@Html.ActionLink("Tennis Club", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })*@
+                <div class="logostyle">
+                    <a href="@Url.Action("Index","Home")"><img src="~/Images/logo.png" /></a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li id="home">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li id="about">
+                       @Html.ActionLink("About Us", "Index", "About")
+                    </li>
+                    <li id="services">
+                        @Html.ActionLink("Membership", "Index", "Services")
+                    </li>            
+                    </ul>
+               
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="portfolio" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="1columnportfolio">
+                                @Html.ActionLink("Lessons", "Index", "Lessons")
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li id="contact">
+                        @Html.ActionLink("Contact", "Index", "Contact")
+                    </li>
+                    <li id="contact">
+                        @Html.ActionLink("Admin Tools", "Index", "Admin")
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    @RenderBody()
+    <br /><br /><br />
+    <section class="newstyle2">
+        <div class="container">
+            <footer>
+                <div class="footer-copyright text-center">
+                    <i class="fab fa-facebook-square fa-4x"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <i class="fab fa-twitter-square fa-4x"></i>
+                    <br /><br />
+                    <p>© 2018 Copyright - Designed by Team 5 : Kittibodee Singnil / Logan Vagugh / Khala Alahmadi</p>
+                </div>
+            </footer>
+        </div>
+        <!-- /.container -->
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="@Url.Content("/js/bootstrap.js")"></script>
+    <script src="@Url.Content("/js/modern-business.js")"></script>
+
+</body>
+</html>

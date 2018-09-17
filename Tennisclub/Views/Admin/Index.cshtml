@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Admin Tools
+                <small>Only for admistrative</small>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-sm-6">
+                <img src="~/Images/coaches.jpg" class="img-responsive">
+                <h3 class="text-center">Coaches Database</h3>
+              <ul>
+                  <li>Add new coach</li>
+                  <li>Edit coach's information</li>
+                  <li>View coach's information</li>
+              </ul>
+                <a href="@Url.Action("Index","Employees")" class="btn btn-primary center-block">Click Here</a>
+            </div>
+            <div class="col-sm-6">
+                <img src="~/Images/members.jpg" class="img-responsive">
+                <h3 class="text-center">Members Database</h3>
+                <ul>
+                    <li>Add new member</li>
+                    <li>Edit member's information</li>
+                    <li>View member's information</li>
+                </ul>
+                <a href="@Url.Action("Index","Members")" class="btn btn-primary center-block">Click Here</a>
+            </div>
+      </div>
+       <br/><br /><br />
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="~/Images/lessons.jpg" class="img-responsive">
+                <h3 class="text-center">Lessons Database</h3>
+                <ul>
+                    <li>Add new lesson</li>
+                    <li>Edit lesson's information</li>
+                    <li>View lesson's information</li>
+                </ul>
+                <a href="@Url.Action("IndexAdmin","lessons")" class="btn btn-primary center-block">Click Here</a>
+            </div>
+            <div class="col-sm-6">
+                <img src="~/Images/enrollment.png" class="img-responsive">
+                <h3 class="text-center">Enrollments Database</h3>
+                <ul>
+                    <li>Add member to lessons</li>
+                    <li>Edit enrollment's information</li>
+                    <li>View member's enrollment information</li>
+                </ul>
+                <a href="@Url.Action("Index","Enrollments")" class="btn btn-primary center-block">Click Here</a>
+            </div>
+        </div>
+
+</div>

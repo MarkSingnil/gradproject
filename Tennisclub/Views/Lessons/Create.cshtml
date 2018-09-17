@@ -1,0 +1,70 @@
+﻿@model Tennisclub.Models.Lesson
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container">
+    <div class="col-lg-12">
+        <h1 class="page-header">Adding New Class</h1>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+           
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                @Html.LabelFor(model => model.LessonName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LessonName)
+                    @Html.ValidationMessageFor(model => model.LessonName)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LessonDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LessonDescription)
+                    @Html.ValidationMessageFor(model => model.LessonDescription)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EmployeeID, "EmployeeID", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("EmployeeID", String.Empty)
+                    @Html.ValidationMessageFor(model => model.EmployeeID)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LessonDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LessonDate)
+                    @Html.ValidationMessageFor(model => model.LessonDate)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ImagePath, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ImagePath)
+                    @Html.ValidationMessageFor(model => model.ImagePath)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    </div>

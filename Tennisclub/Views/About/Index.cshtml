@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Tennisclub.Models.Employee>
+
+@{
+    ViewBag.Title = "About";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                About Us
+                <small>It's Nice to Meet You!</small>
+            </h1>          
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <img src="~/Images/Maple.jpg" class="img-responsive">
+    </div>
+    <div class="col-md-6">
+        <h2>Maple Ridge Tennis Club</h2>
+       <p>Maple Ridge Tennis Club is a family owned, professionally run tennis and fitness facility in business to serve the Northwest Ohio and Southeast Michigan tennis community. Our passion lies in creating a family friendly tennis environment for players of all levels, ages and experience. At Twos, we believe every communication, interaction, program, and lesson is a chance to audition for you. Why? Because that’s what you deserve. Here’s what else we believe you deserve:</p>
+        <a href="@Url.Action("Index","Contact")" class="btn btn-primary">Contact Us</a>
+
+     </div>
+</div>
+<!-- Team Member Profiles -->
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Our Coaches</h2>
+    </div>
+    @foreach(var item in Model) { 
+        <div class="col-sm-4">
+            <img src="~/Images/@item.ImagePath" class="img-responsive">
+            <h3 class="text-center">
+                @item.FirstName @item.LastName
+            </h3>
+            <p class="text-center">Been a team member since @String.Format("{0:MM/dd/yyyy}", item.StartDate)</p>
+            <br /><br />
+
+        </div>
+
+    }
+   
+</div>
+
+</div>

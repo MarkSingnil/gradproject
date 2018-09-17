@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<div id="myCarousel" class="carousel slide">
+    
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img class="fill" src="~/Images/courts.jpg" alt="Sample Photo" />          
+        </div>
+        <div class="item">
+            <img class="fill" src="~/Images/courts2.jpg" alt="Sample Photo" />
+            
+        </div>
+        <div class="item">
+            <img class="fill" src="~/Images/courts3.jpg" alt="Sample Photo" />
+            
+        </div>
+    </div>
+
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</div>
+
+<div class="sectionunderpic">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h2>About Us</h2>
+                <p>Our Tennis club is a family owned, professionally run tennis and fitness facility in business to serve the Northwest Ohio and Southeast Michigan tennis community. Our passion lies in creating a family friendly tennis environment for players of all levels, ages and experience. At Our Tennis Club, we believe every communication, interaction, program, and lesson is a chance to audition for you.</p>
+                <ul class="list-unstyled">
+                  
+                    <li><i class="fa fa-check-square">&nbsp &nbsp A club that believes its members come first</i></li>    
+                    <li><i class="fa fa-check-square">&nbsp &nbsp A professional management, tennis, and fitness staff who care</li></i>
+                    <li><i class="fa fa-check-square">&nbsp &nbsp Predefined File Paths</li></i>
+                    <li><i class="fa fa-check-square">&nbsp &nbsp First-class amenities</li></i>
+                    <li><i class="fa fa-check-square">&nbsp &nbsp A fitness center as an amenity to your membership, not a separate charge</li></i>
+                    <li><i class="fa fa-check-square">&nbsp &nbsp A staff empowered to do whatever it takes to create a memorable experience</li></i>
+                    <li><i class="fa fa-check-square">&nbsp &nbsp An on-site Spa to help you relax and recharge</li></i>
+</ul>
+                <a class="btn btn-primary"   @Html.ActionLink("More About Us", "Index", "About")</a>
+               
+
+
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <img class="img-responsive" src="~/Images/tennisclub.jpg">
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+
+<div class="section-colored text-center">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="newstyle">
+                    <h2>Learn How To Play Tennis In 4 Weeks</h2>
+                    <p> Now is the time to learn how to play tennis! The Cost is $80 for 6 hours of instruction. All participants can also rent court time each week while participating in a Beginner Session at the same rate that members pay-$10 each for doubles or $15 each for singles per hour.</p>
+                    <p>Call the club at 419-873-6123 for current days/times that are available</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section-colored -->
+
+
+<div class="section">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <img class="img-responsive" src="~/Images/facility.jpg" alt="Facility Photo" />  
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h2>Our Facility Includes</h2>
+                <ul>
+                    <li>8 Indoor tennis courts</li>
+                    <li>8 Outdoor tennis courts: 4 Har-Tru clay and 4 hard </li>
+                    <li>Professional tennis instruction for juniors and adults of all levels</li>
+                    <li>USTA leagues and tournaments</li>
+                    <li>Tennis pro-shop with rackets, strings, accessories, and shoes</li>
+                    <li>2nd floor indoor-viewing mezzanine</li>
+                    <li>Outdoor shelter house with picnic tables and grill for parties and gatherings</li>
+                    <li>Stringing service <strong>Free</strong> to Use</li>
+                    <li>Child care service</li>
+                </ul>
+                <a class="btn btn-primary" @Html.ActionLink("Our Lessons", "Index", "Lessons")</a>
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+<div class="section">
+    <div class="container">
+
+        <!-- Our Customers -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Our Members</h2>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img src="~/Images/customer1.png" class="img-responsive img-customer">
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img src="~/Images/customer2.jpg" class="img-responsive img-customer">
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img src="~/Images/customer3.jpg" class="img-responsive img-customer">
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img src="~/Images/customer4.jpg" class="img-responsive img-customer">
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img src="~/Images/customer5.jpg" class="img-responsive img-customer">
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img src="~/Images/customer6.jpg" class="img-responsive img-customer">
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /.container -->
